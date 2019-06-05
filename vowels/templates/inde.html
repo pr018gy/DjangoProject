@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>  
+        <title> Analyzer</title>
+    </head>
+    <body>
+            <form method="POST" action="{%url 'calc' %}">
+                {% csrf_token %}
+                <textarea name="text" id="" cols="50" rows="10">{{text}}</textarea>
+                <br>
+                <button type="submit">Submit</button>
+        
+        
+           </form>
+
+           {% if consonents or vowel  %}
+           {{vowel}} 
+           {{consonants}}
+           {% endif %}
+    </body>
+</html>
